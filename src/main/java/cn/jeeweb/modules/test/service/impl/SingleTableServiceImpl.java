@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**   
- * @Title: 单表测试
- * @Description: 单表测试
+ * @Title: 测试单表
+ * @Description: 测试单表
  * @author jeeweb
- * @date 2017-07-27 09:05:34
+ * @date 2017-09-10 15:02:18
  * @version V1.0   
  *
  */

@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**   
- * @Title: 客户信息
- * @Description: 客户信息
+ * @Title: 订单客户信息
+ * @Description: 订单客户信息
  * @author jeeweb
- * @date 2017-07-22 20:05:35
+ * @date 2017-09-10 14:48:06
  * @version V1.0   
  *
  */

@@ -3,16 +3,16 @@
 <mapper namespace="cn.jeeweb.modules.test.mapper.TestOrderMainMapper" >
 
   <sql id="Base_Column_List" >
-    t.id,
-    t.orderno,
-    t.money,
-    t.orderdate,
-    t.create_by AS 'createBy.id',
-    t.create_date,
-    t.update_by AS 'updateBy.id',
-    t.update_date,
-    t.del_flag,
-    t.remarks
+    t.ID,
+    t.ORDERNO,
+    t.MONEY,
+    t.ORDERDATE,
+    t.CREATE_BY AS "createBy.id",
+    t.CREATE_DATE,
+    t.UPDATE_BY AS "updateBy.id",
+    t.UPDATE_DATE,
+    t.DEL_FLAG,
+    t.REMARKS
   </sql>
   
 </mapper>

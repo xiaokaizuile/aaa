@@ -5,55 +5,56 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.enums.FieldFill;
 import java.util.Date;
 import cn.jeeweb.modules.sys.entity.User;
 
 /**   
- * @Title: 机票信息
- * @Description: 机票信息
+ * @Title: 订单票据
+ * @Description: 订单票据
  * @author jeeweb
- * @date 2017-07-22 20:05:35
+ * @date 2017-09-10 14:48:06
  * @version V1.0   
  *
  */
-@TableName("test_order_ticket")
+@TableName("TEST_ORDER_TICKET")
 @SuppressWarnings("serial")
 public class TestOrderTicket extends AbstractEntity<String> {
 
-    /**id*/
+    /**主键*/
     @TableId(value = "id", type = IdType.UUID)
 	private String id;
     /**航班号*/
-    @TableField(value = "fltno")
+    @TableField(value = "FLTNO")
 	private String fltno;
     /**航班时间*/
-    @TableField(value = "flytime")
+    @TableField(value = "FLYTIME")
 	private Date flytime;
     /**备注信息*/
-    @TableField(value = "remarks")
+    @TableField(value = "REMARKS")
 	private String remarks;
     /**order_id*/
-    @TableField(value = "order_id",el="order.id")
+    @TableField(value = "ORDER_ID",el="order.id")
 	private TestOrderMain order;
     /**创建者*/
-    @TableField(value = "create_by",el="createBy.id")
+    @TableField(value = "CREATE_BY",el="createBy.id",fill = FieldFill.INSERT)
 	private User createBy;
     /**创建时间*/
-    @TableField(value = "create_date")
+    @TableField(value = "CREATE_DATE",fill = FieldFill.INSERT)
 	private Date createDate;
     /**更新者*/
-    @TableField(value = "update_by",el="updateBy.id")
+    @TableField(value = "UPDATE_BY",el="updateBy.id",fill = FieldFill.UPDATE)
 	private User updateBy;
     /**更新时间*/
-    @TableField(value = "update_date")
+    @TableField(value = "UPDATE_DATE",fill = FieldFill.UPDATE)
 	private Date updateDate;
     /**删除标记（0：正常；1：删除）*/
-    @TableField(value = "del_flag")
+    @TableField(value = "DEL_FLAG")
 	private String delFlag;
 	
 	/**
 	 * 获取  id
-	 *@return: String  id
+	 *@return: String  主键
 	 */
 	public String getId(){
 		return this.id;
@@ -61,7 +62,7 @@ public class TestOrderTicket extends AbstractEntity<String> {
 
 	/**
 	 * 设置  id
-	 *@param: id  id
+	 *@param: id  主键
 	 */
 	public void setId(String id){
 		this.id = id;

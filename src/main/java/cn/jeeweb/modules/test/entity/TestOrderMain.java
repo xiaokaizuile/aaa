@@ -5,18 +5,19 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableField;
-import java.util.Date;
+import com.baomidou.mybatisplus.enums.FieldFill;
 import cn.jeeweb.modules.sys.entity.User;
+import java.util.Date;
 
 /**   
- * @Title: 订单主表
- * @Description: 订单主表
+ * @Title: 测试主表
+ * @Description: 测试主表
  * @author jeeweb
- * @date 2017-07-22 20:05:35
+ * @date 2017-09-10 14:48:06
  * @version V1.0   
  *
  */
-@TableName("test_order_main")
+@TableName("TEST_ORDER_MAIN")
 @SuppressWarnings("serial")
 public class TestOrderMain extends AbstractEntity<String> {
 
@@ -24,31 +25,31 @@ public class TestOrderMain extends AbstractEntity<String> {
     @TableId(value = "id", type = IdType.UUID)
 	private String id;
     /**订单号*/
-    @TableField(value = "orderno")
+    @TableField(value = "ORDERNO")
 	private String orderno;
     /**订单金额*/
-    @TableField(value = "money")
+    @TableField(value = "MONEY")
 	private String money;
     /**订单日期*/
-    @TableField(value = "orderdate")
-	private Date orderdate;
+    @TableField(value = "ORDERDATE")
+	private String orderdate;
     /**创建者*/
-    @TableField(value = "create_by",el="createBy.id")
+    @TableField(value = "CREATE_BY",el="createBy.id",fill = FieldFill.INSERT)
 	private User createBy;
     /**创建时间*/
-    @TableField(value = "create_date")
+    @TableField(value = "CREATE_DATE",fill = FieldFill.INSERT)
 	private Date createDate;
     /**更新者*/
-    @TableField(value = "update_by",el="updateBy.id")
+    @TableField(value = "UPDATE_BY",el="updateBy.id",fill = FieldFill.UPDATE)
 	private User updateBy;
     /**更新时间*/
-    @TableField(value = "update_date")
+    @TableField(value = "UPDATE_DATE",fill = FieldFill.UPDATE)
 	private Date updateDate;
     /**删除标记（0：正常；1：删除）*/
-    @TableField(value = "del_flag")
+    @TableField(value = "DEL_FLAG")
 	private String delFlag;
     /**备注信息*/
-    @TableField(value = "remarks")
+    @TableField(value = "REMARKS")
 	private String remarks;
 	
 	/**
@@ -98,9 +99,9 @@ public class TestOrderMain extends AbstractEntity<String> {
 	}
 	/**
 	 * 获取  orderdate
-	 *@return: Date  订单日期
+	 *@return: String  订单日期
 	 */
-	public Date getOrderdate(){
+	public String getOrderdate(){
 		return this.orderdate;
 	}
 
@@ -108,7 +109,7 @@ public class TestOrderMain extends AbstractEntity<String> {
 	 * 设置  orderdate
 	 *@param: orderdate  订单日期
 	 */
-	public void setOrderdate(Date orderdate){
+	public void setOrderdate(String orderdate){
 		this.orderdate = orderdate;
 	}
 	/**

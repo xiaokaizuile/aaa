@@ -115,6 +115,7 @@
 	    	 $.jgrid.defaults.width = 960;
 			 $.jgrid.defaults.responsive = true;
 			 $.jgrid.defaults.styleUI = 'Bootstrap';
+			 $.jgrid.ajaxOptions.type = 'post';
 	    	 iChecks();
 	    	 init${(id)}Table();
 	    	 init${(id)}Date();

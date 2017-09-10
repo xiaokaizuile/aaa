@@ -5,22 +5,23 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.enums.FieldFill;
 import java.util.Date;
 import cn.jeeweb.modules.sys.entity.User;
 
 /**   
- * @Title: 单表测试
- * @Description: 单表测试
+ * @Title: 测试单表
+ * @Description: 测试单表
  * @author jeeweb
- * @date 2017-07-27 09:05:34
+ * @date 2017-09-10 15:02:18
  * @version V1.0   
  *
  */
-@TableName("test_single_table")
+@TableName("TEST_SINGLE_TABLE")
 @SuppressWarnings("serial")
 public class SingleTable extends AbstractEntity<String> {
 
-    /**字段主键*/
+    /**主键*/
     @TableId(value = "id", type = IdType.UUID)
 	private String id;
     /**名称*/
@@ -30,16 +31,16 @@ public class SingleTable extends AbstractEntity<String> {
     @TableField(value = "testdate")
 	private Date testdate;
     /**创建者*/
-    @TableField(value = "create_by",el="createBy.id")
+    @TableField(value = "create_by",el="createBy.id",fill = FieldFill.INSERT)
 	private User createBy;
     /**创建时间*/
-    @TableField(value = "create_date")
+    @TableField(value = "create_date",fill = FieldFill.INSERT)
 	private Date createDate;
     /**更新者*/
-    @TableField(value = "update_by",el="updateBy.id")
+    @TableField(value = "update_by",el="updateBy.id",fill = FieldFill.UPDATE)
 	private User updateBy;
     /**更新时间*/
-    @TableField(value = "update_date")
+    @TableField(value = "update_date",fill = FieldFill.UPDATE)
 	private Date updateDate;
     /**删除标记（0：正常；1：删除）*/
     @TableField(value = "del_flag")
@@ -50,7 +51,7 @@ public class SingleTable extends AbstractEntity<String> {
 	
 	/**
 	 * 获取  id
-	 *@return: String  字段主键
+	 *@return: String  主键
 	 */
 	public String getId(){
 		return this.id;
@@ -58,7 +59,7 @@ public class SingleTable extends AbstractEntity<String> {
 
 	/**
 	 * 设置  id
-	 *@param: id  字段主键
+	 *@param: id  主键
 	 */
 	public void setId(String id){
 		this.id = id;

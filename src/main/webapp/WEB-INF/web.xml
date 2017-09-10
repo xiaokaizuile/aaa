@@ -131,7 +131,6 @@
 	</filter-mapping>
 
 	<!-- Xss安全过滤
-	
 	<filter>
 		<filter-name>XssEscape</filter-name>
 		<filter-class>cn.jeeweb.core.filter.xss.XssFilter</filter-class>

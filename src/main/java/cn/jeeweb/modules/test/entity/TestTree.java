@@ -5,45 +5,41 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableField;
-
+import com.baomidou.mybatisplus.enums.FieldFill;
 import cn.jeeweb.modules.sys.entity.User;
 import java.util.Date;
 
 
 /**   
- * @Title: 测试数
- * @Description: 测试数
+ * @Title: 测试树
+ * @Description: 测试树
  * @author jeeweb
- * @date 2017-07-22 23:05:53
+ * @date 2017-09-10 14:48:58
  * @version V1.0   
  *
  */
-@TableName("test_tree")
+@TableName("TEST_TREE")
 @SuppressWarnings("serial")
 public class TestTree extends TreeEntity<TestTree> {
 	
-    /**字段主键*/
-    /**机构名称*/
     /**备注信息*/
-    @TableField(value = "remarks")
+	@TableField(value = "REMARKS")
 	private String remarks;
     /**创建者*/
-    @TableField(value = "create_by",el="createBy.id")
+	@TableField(value = "CREATE_BY",el="createBy.id",fill = FieldFill.INSERT)
 	private User createBy;
     /**创建时间*/
-    @TableField(value = "create_date")
+	@TableField(value = "CREATE_DATE",fill = FieldFill.INSERT)
 	private Date createDate;
     /**更新者*/
-    @TableField(value = "update_by",el="updateBy.id")
+	@TableField(value = "UPDATE_BY",el="updateBy.id",fill = FieldFill.UPDATE)
 	private User updateBy;
     /**更新时间*/
-    @TableField(value = "update_date")
+	@TableField(value = "UPDATE_DATE",fill = FieldFill.UPDATE)
 	private Date updateDate;
     /**删除标记（0：正常；1：删除）*/
-    @TableField(value = "del_flag")
+	@TableField(value = "DEL_FLAG")
 	private String delFlag;
-    /**父节点*/
-    /**父节点路径*/
 	
 	/**
 	 * 获取  remarks

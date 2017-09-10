@@ -4,10 +4,10 @@ import cn.jeeweb.core.common.service.ICommonService;
 import cn.jeeweb.modules.test.entity.TestOrderMain;
 
 /**   
- * @Title: 订单主表
- * @Description: 订单主表
+ * @Title: 测试主表
+ * @Description: 测试主表
  * @author jeeweb
- * @date 2017-07-22 20:05:35
+ * @date 2017-09-10 14:48:06
  * @version V1.0   
  *
  */

@@ -20,10 +20,10 @@ import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 /**   
- * @Title: 订单主表
- * @Description: 订单主表
+ * @Title: 测试主表
+ * @Description: 测试主表
  * @author jeeweb
- * @date 2017-07-22 20:05:35
+ * @date 2017-09-10 14:48:06
  * @version V1.0   
  *
  */
@@ -39,7 +39,7 @@ public class TestOrderMainServiceImpl  extends CommonServiceImpl<TestOrderMainMa
 	public boolean insert(TestOrderMain testOrderMain) {
 		// 保存主表
 		super.insert(testOrderMain);
-		// 保存机票信息
+		// 保存订单票据
 		String testOrderTicketListJson = StringEscapeUtils
 				.unescapeHtml4(ServletUtils.getRequest().getParameter("testOrderTicketListJson"));
 		List<TestOrderTicket> testOrderTicketList = JSONObject.parseArray(testOrderTicketListJson, TestOrderTicket.class);
@@ -48,7 +48,7 @@ public class TestOrderMainServiceImpl  extends CommonServiceImpl<TestOrderMainMa
 			testOrderTicket.setOrder(testOrderMain);
 			testOrderTicketService.insert(testOrderTicket);
 		}
-		// 保存客户信息
+		// 保存订单客户信息
 		String testOrderCustomerListJson = StringEscapeUtils
 				.unescapeHtml4(ServletUtils.getRequest().getParameter("testOrderCustomerListJson"));
 		List<TestOrderCustomer> testOrderCustomerList = JSONObject.parseArray(testOrderCustomerListJson, TestOrderCustomer.class);
