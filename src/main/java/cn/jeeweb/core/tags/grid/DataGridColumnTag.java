@@ -132,13 +132,13 @@ public class DataGridColumnTag extends AbstractGridHtmlTag {
 		}
 		if (StringUtils.isEmpty(formatter)) {
 			if (MapUtils.containsOrKeys(columnMap, keys)) {
-				this.formatter = "label";
-				columnMap.put("formatter", this.formatter);
+				String formatter= "label";
+				columnMap.put("formatter", formatter);
 			}
 		}
 		if (!StringUtils.isEmpty(dict) && StringUtils.isEmpty(formatterValue)) {
-			this.formatterValue = dictToFormatterValue(dict);
-			columnMap.put("formatterValue", this.formatterValue);
+			String formatterValue = dictToFormatterValue(dict);
+			columnMap.put("formatterValue", formatterValue);
 		}
 		parentTag.addColumn(columnMap);
 	}
