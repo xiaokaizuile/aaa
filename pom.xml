@@ -482,6 +482,7 @@
 
 	</repositories>
 	<build>
+	
 		<!--解决不联网资源文件不能解析的问题-->
 		<resources>
 			<resource>
