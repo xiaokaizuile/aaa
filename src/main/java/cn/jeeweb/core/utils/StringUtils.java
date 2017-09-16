@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -326,5 +327,19 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 		}else{
 			return null;
 		}
+	}
+
+	public static <T> String toFormatterValue(List<T> datas, String label, String value) {
+		String formaterValues = "";
+		for (Object data : datas) {
+			if (!StringUtils.isEmpty(formaterValues)) {
+				formaterValues+=";";
+			}
+			String labelValue = Reflections.getFieldValue(data, label) + "";
+			String valueValue = Reflections.getFieldValue(data, value) + "";
+			String formaterValue = valueValue + ":" + labelValue;
+			formaterValues+=formaterValue;
+		}
+		return formaterValues;
 	}
 }
