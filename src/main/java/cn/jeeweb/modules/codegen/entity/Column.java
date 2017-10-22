@@ -438,7 +438,7 @@ public class Column extends DataEntity<String> implements java.io.Serializable {
 	private Boolean inTarget(String source, String[] targets) {
 		Boolean inTarget = Boolean.FALSE;
 		for (String type : targets) {
-			if (type.trim().equals(source.trim())) {
+			if (type.toUpperCase().trim().equals(source.toUpperCase().trim())) {
 				inTarget = Boolean.TRUE;
 				break;
 			}
