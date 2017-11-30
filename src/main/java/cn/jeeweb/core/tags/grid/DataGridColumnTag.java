@@ -1,5 +1,6 @@
 package cn.jeeweb.core.tags.grid;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -86,6 +87,10 @@ public class DataGridColumnTag extends AbstractGridHtmlTag {
 			queryMap.put("label", label);
 			if (!StringUtils.isEmpty(dict)) {
 				queryMap.put("dict", dict);
+			}else if(!StringUtils.isEmpty(formatterValue)) {
+				String dict=this.name+"_"+formatterValue.hashCode();
+				queryMap.put("dict",dict);
+				parentTag.putColumnDict(dict,formatterValueToDict(this.formatterValue));
 			}
 			queryMap.put("queryMode", queryMode);
 			queryMap.put("condition", condition);
@@ -141,6 +146,24 @@ public class DataGridColumnTag extends AbstractGridHtmlTag {
 			columnMap.put("formatterValue", formatterValue);
 		}
 		parentTag.addColumn(columnMap);
+	}
+
+	private List<Dict> formatterValueToDict(String formatterValue){
+		String[] dicts=formatterValue.split(";");
+		List<Dict> dictList=new ArrayList<Dict>();
+		for (int i = 0; i < dicts.length; i++) {
+			String dict=dicts[i];
+			if (!StringUtils.isEmpty(dict)) {
+				String[] dictMap= dict.split(":");
+				if (dictMap.length==2) {
+					Dict dictBean=new Dict();
+					dictBean.setLabel(dictMap[1]);
+					dictBean.setValue(dictMap[0]);
+					dictList.add(dictBean);
+				}
+			}
+		}
+		return dictList;
 	}
 
 	public String dictToFormatterValue(String dict) {

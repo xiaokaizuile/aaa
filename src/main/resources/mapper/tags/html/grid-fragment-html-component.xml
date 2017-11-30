@@ -180,6 +180,7 @@
 			    sortorder: "${sortorder}",
 			    </#if>
 			    multiselect: ${multiselect?string("true","false")},
+			    shrinkToFit: ${shrinkToFit?string("true","false")},
 			    //width: ${width},
 			    height: ${height},
 			    shrinkToFit: true,
