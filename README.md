@@ -1,6 +1,6 @@
 JeeWeb敏捷开发平台(Mybatis)
 ===============
-* 	QQ交流群： 570062301
+* 	QQ交流群： 570062301(满)、522959928
 * 	官方网站： [https://www.jeeweb.cn](https://www.jeeweb.cn)
 * 	文档地址： [https://doc.jeeweb.cn](https://doc.jeeweb.cn)
 * 	项目演示： [https://mybatis.jeeweb.cn](https://mybatis.jeeweb.cn)
