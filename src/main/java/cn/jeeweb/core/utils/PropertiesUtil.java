@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URISyntaxException;
 import java.util.Map;
 import java.util.Properties;
 import org.apache.commons.io.IOUtils;
@@ -75,9 +76,9 @@ public class PropertiesUtil extends ObjectSwitchHelper {
 		return "";
 	}
 
-	public String getAbsolutePath(String filename) {
+	public String getAbsolutePath(String filename) throws URISyntaxException {
 		if (!FileUtil.isAbsolutePath(filename)) {
-			filename = PropertiesUtil.class.getClassLoader().getResource(filename).getPath();
+			filename = PropertiesUtil.class.getClassLoader().getResource(filename).toURI().getPath();
 		}
 		return filename;
 	}
