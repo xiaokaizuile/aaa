@@ -34,19 +34,19 @@
 	                            <div class="form-group col-sm-12">
 	                                <label class="col-sm-4 control-label"><font color="red">*</font>端口：</label>
 	                                <div class="col-sm-8">
-	                                    <form:input path="serverport" class="form-control" defaultvalue="25"   datatype="*"    htmlEscape="false" />
+	                                    <form:input path="serverport" class="form-control" defaultValue="25"   datatype="*"    htmlEscape="false" />
 	                                </div>
 	                            </div>
 	                            <div class="form-group col-sm-12">
 	                                <label class="col-sm-4 control-label"><font color="red">*</font>主帐号：</label>
 	                                <div class="col-sm-8">
-	                                    <form:input path="accountsid"   defaultvalue=""   datatype="*"  htmlEscape="false" cssClass="form-control" />
+	                                    <form:input path="accountsid"   defaultValue=""   datatype="*"  htmlEscape="false" cssClass="form-control" />
 	                                </div>
 	                            </div>
 	                            <div class="form-group col-sm-12">
 	                                <label class="col-sm-4 control-label"><font color="red">*</font>主帐号令牌：</label>
 	                                <div class="col-sm-8">
-	                                    <form:input path="accounttoken"    defaultvalue=""   datatype="*"  htmlEscape="false" cssClass="form-control" />
+	                                    <form:input path="accounttoken"    defaultValue=""   datatype="*"  htmlEscape="false" cssClass="form-control" />
 	                                </div>
 	                            </div>
 	  							<div class="form-group col-sm-12">
@@ -105,7 +105,7 @@
 	                            <div class="form-group col-sm-12">
 	                                <label class="col-sm-4 control-label"><font color="red">*</font>APIKEY：</label>
 	                                <div class="col-sm-8">
-	                                    <form:input path="apikey" class="form-control" defaultvalue="25"   datatype="*"    htmlEscape="false" />
+	                                    <form:input path="apikey" class="form-control" defaultValue="25"   datatype="*"    htmlEscape="false" />
 	                                </div>
 	                            </div>
 	                             <div class="form-group col-sm-12">

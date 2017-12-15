@@ -34,13 +34,13 @@
 				   <label class="pull-right"><font color="red">*</font>是否系统数据:</label>
 				</td>
 				<td>
-				     <form:radiobuttons path="isSys"   dict="sf" defaultvalue="0"  htmlEscape="false" cssClass="i-checks required" />
+				     <form:radiobuttons path="isSys"   dict="sf" defaultValue="0"  htmlEscape="false" cssClass="i-checks required" />
 				</td>
 				<td class="active">
 				   <label class="pull-right"><font color="red">*</font>是否可用:</label>
 				</td>
 				<td>
-				     <form:radiobuttons path="usable"   dict="sf" defaultvalue="1"  htmlEscape="false" cssClass="i-checks required" />
+				     <form:radiobuttons path="usable"   dict="sf" defaultValue="1"  htmlEscape="false" cssClass="i-checks required" />
 				</td>
 			  </tr>
 			  <tr>

@@ -45,7 +45,7 @@
           <label class="pull-right">
             <font color="red">*</font>用户角色:</label></td>
         <td colspan="3">
-          <form:checkboxes path="roleIdList" nested="false" items="${allRoles}" defaultvalue="${roleIdList}" itemLabel="name" itemValue="id" htmlEscape="false" cssClass="i-checks required" /></td>
+          <form:checkboxes path="roleIdList" nested="false" items="${allRoles}" defaultValue="${roleIdList}" itemLabel="name" itemValue="id" htmlEscape="false" cssClass="i-checks required" /></td>
       </tr>
       <tr>
         <td class="width-15 active">

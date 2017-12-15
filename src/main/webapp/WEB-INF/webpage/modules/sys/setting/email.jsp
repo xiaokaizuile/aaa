@@ -33,7 +33,7 @@
                             <div class="form-group col-sm-6">
                                 <label class="col-sm-4 control-label"><font color="red">*</font>邮件发送端口：</label>
                                 <div class="col-sm-8">
-                                    <form:input path="port" class="form-control" defaultvalue="25"   datatype="*"    htmlEscape="false" />
+                                    <form:input path="port" class="form-control" defaultValue="25"   datatype="*"    htmlEscape="false" />
                                 </div>
                             </div>
                             <div class="form-group col-sm-6">
@@ -45,13 +45,13 @@
                             <div class="form-group col-sm-6">
                                 <label class="col-sm-4 control-label"><font color="red">*</font>认证用户名：</label>
                                 <div class="col-sm-8">
-                                    <form:input path="username"   defaultvalue=""   datatype="*"  htmlEscape="false" cssClass="form-control" />
+                                    <form:input path="username"   defaultValue=""   datatype="*"  htmlEscape="false" cssClass="form-control" />
                                 </div>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label class="col-sm-4 control-label"><font color="red">*</font>认证密码：</label>
                                 <div class="col-sm-8">
-                                    <form:input path="password"    defaultvalue=""   datatype="*"  htmlEscape="false" cssClass="form-control" />
+                                    <form:input path="password"    defaultValue=""   datatype="*"  htmlEscape="false" cssClass="form-control" />
                                 </div>
                             </div>
   							<div class="form-group col-sm-6">

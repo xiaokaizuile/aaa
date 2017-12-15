@@ -43,7 +43,7 @@
 		      <tr>
 		         <td  class="width-15 active text-right">	<label><font color="red">*</font>表类型:</label></td>
 			     <td  class="width-35" >
-			             <form:select path="tableType"  dict="tabletype" defaultvalue="1" class="form-control"></form:select>
+			             <form:select path="tableType"  dict="tabletype" defaultValue="1" class="form-control"></form:select>
 			             <label class="Validform_checktip"></label>
 			     </td>
 		         <td  class="width-15 active">

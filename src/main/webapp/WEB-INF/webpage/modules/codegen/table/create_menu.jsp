@@ -33,7 +33,7 @@
 		         </td>
 		         <td class="width-35" >
 		             <form:radiobuttons path="isshow"
-								 dict="sf" defaultvalue="${roleIdList}"
+								 dict="sf" defaultValue="${roleIdList}"
 								 htmlEscape="false"
 								cssClass="i-checks required" />
 		              <label class="Validform_checktip"></label>
